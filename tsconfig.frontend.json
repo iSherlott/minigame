@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2019" ,
+    "module": "CommonJS" ,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ] ,
+    "allowJs": true ,
+    "sourceMap": true ,
+    "outDir": "./frontend/assets/js" ,
+    "rootDir": "./src" ,
+    "removeComments": true ,
+    "noEmitOnError": true,
+    "strict": true ,
+    "esModuleInterop": true ,
+    "experimentalDecorators": true ,
+    "emitDecoratorMetadata": true ,
+    "skipLibCheck": true ,
+    "forceConsistentCasingInFileNames": true 
+  },
+  "include": ["./src"]
+}

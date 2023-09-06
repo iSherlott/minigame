@@ -1,0 +1,39 @@
+.mainLv1 {
+  position: absolute;
+  top: 105px;
+  right: 216px;
+  width: 104px;
+  height: 80px;
+  background: url("../img/visual-building.png") -99px 334px;
+  z-index: 1;
+}
+
+.churchLv1 {
+  position: absolute;
+  top: 129px;
+  right: 124px;
+  width: 118px;
+  height: 120px;
+  background: url("../img/visual-building.png") -271px 0;
+  z-index: 1;
+}
+
+.churchLv2 {
+  position: absolute;
+  top: 126px;
+  right: 118px;
+  width: 125px;
+  height: 120px;
+  background: url("../img/visual-building.png") -140px 0;
+  z-index: 1;
+}
+
+.churchLv3 {
+  position: absolute;
+  top: 120px;
+  right: 107px;
+  width: 136px;
+  height: 120px;
+  background: url("../img/visual-building.png");
+  z-index: 1;
+}

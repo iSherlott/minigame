@@ -1,0 +1,240 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  max-width: 1280px;
+  min-width: 720px;
+
+  background-color: #f0f0f0;
+
+  background-image: url("../img/wallpaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: grid;
+  grid-template-rows: 70px auto 40px;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+@media (min-width: 1280px) {
+  body {
+    display: grid;
+
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-rows: 80px auto 40px;
+    grid-template-columns: calc(50vw - 640px) 1280px calc(50vw - 640px);
+    grid-template-areas:
+      "header header header"
+      ". content ."
+      ". footer .";
+  }
+
+  .game-container,
+  .footer {
+    border: 1px solid black;
+  }
+}
+
+@media (max-width: 939px) {
+  body {
+    display: grid;
+    grid-template-rows: 70px auto 40px;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+}
+
+.game-info {
+  display: flex;
+
+  justify-content: space-around;
+  padding: 10px 0 10px 0;
+
+  background-image: url("../img/topbar-left.png"), url("../img/topbar-main.png"),
+    url("../img/topbar-right.png");
+  background-size: contain, contain, contain;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: left center, center center, right center;
+
+  grid-area: header;
+}
+
+.game-container {
+  background-color: #f0f0f0;
+
+  background-image: url("../img/bg-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  grid-area: content;
+}
+
+.resource {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  width: 150px;
+}
+
+.resource-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.resource-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.resource-value {
+  font-size: 18px;
+}
+
+@media (min-width: 1280px) {
+  .game-info {
+    display: flex;
+
+    justify-content: center;
+  }
+
+  .resource {
+    margin: 0 100px 0 100px;
+    width: 200px;
+  }
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-size: 14px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  grid-area: footer;
+}
+
+.grid-container {
+  grid-area: content;
+
+  display: grid;
+
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "village village menu"
+    "village village menu"
+    "painel painel painel";
+}
+
+#village {
+  width: fit-content;
+  height: fit-content;
+
+  margin: 10px;
+
+  grid-area: village;
+}
+
+#menu {
+  display: inline-grid;
+
+  border: 2px solid red;
+  border-radius: 5px;
+
+  margin: 9px 7px 7px 0px;
+  height: 469px;
+
+  width: calc(100% - 700px);
+
+  grid-area: menu;
+}
+
+@media (max-width: 939px) {
+  #menu {
+    display: none;
+  }
+}
+
+#painel {
+  grid-area: painel;
+}
+
+.image-container {
+  position: relative;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+}
+
+.notification-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.notification {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.notification-wrapper {
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  z-index: 100;
+}
